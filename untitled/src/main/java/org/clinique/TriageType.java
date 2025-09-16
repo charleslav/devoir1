@@ -1,4 +1,4 @@
-package org.clinique.domain;
+package org.clinique;
 
 public enum TriageType {
     FIFO

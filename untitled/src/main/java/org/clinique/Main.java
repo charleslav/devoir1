@@ -1,6 +1,7 @@
 package org.clinique;
 
-import org.clinique.domain.TriageType;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,8 +9,10 @@ public class Main {
         TriageType radiologyTriageType = TriageType.FIFO;
 
 
-        // Clinic clinic = new Clinic(doctorTriageType, radiologyTriageType /* , ... */)
-        // clinic.triagePatient("John", 4, VisibleSymptom.MIGRAINE);
+
+         Clinic clinic = new Clinic(doctorTriageType, radiologyTriageType);
+         Patient patient = new Patient("John", 4, List.of(VisibleSymptom.MIGRAINE));
+         clinic.triagePatient(patient);
     }
 
 }
